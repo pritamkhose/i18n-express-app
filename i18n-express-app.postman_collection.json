@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "621378a5-0cbe-4c1c-bd2b-3075fcdcb4f9",
+		"name": "i18n-express-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9250227"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "{{lang}}"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Greeting",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "{{lang}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}greeting?lang={{lang}}",
+					"host": [
+						"{{baseURL}}greeting"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "{{lang}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No message",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "{{lang}}"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}no-message",
+					"host": [
+						"{{baseURL}}no-message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
