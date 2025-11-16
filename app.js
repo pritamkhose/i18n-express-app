@@ -23,7 +23,7 @@ i18next
       },
       saveMissing: true,
       fallbackLng: "en",
-      preload: ["en", "es"],
+      preload: ["en", "es", "fr", "ja", "hi", "mr"],
     },
     (err, t) => {
       if (err) return console.error(err);

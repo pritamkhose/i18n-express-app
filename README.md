@@ -31,7 +31,21 @@ The `/no-message` endpoint has no message value in any translations. In this cas
 $ curl localhost:3000/no-message -H "Accept-Language: es"
 ```
 
-# Reference
-* [Sample repo](https://github.com/bmanley91/express-i18n-example/) [Article](https://dev.to/bmanley91/express-i18n-made-easy-2d2o)
+# Added new i18n key
+The add key in code then update json file with `/locales/en` for English save your changes. Run below cmd which take care of all translation via `translate-google` npm package has free and support.
+```bash
+yarn run i18ntranslate
+```
+Commit all file repo and deploy code.
+List of support loacale are - 
+```bash
+/i18n-express-app/i18n-translate.js 
+const listoflang = ["es", "fr", "ja", "hi", "mr"];
 
+/i18n-express-app/app.js
+preload: ["en", "es", "fr", "ja", "hi", "mr"],
+```
+
+# Reference
+* [Sample code](https://github.com/bmanley91/express-i18n-example/) and details at [Article](https://dev.to/bmanley91/express-i18n-made-easy-2d2o)
 
